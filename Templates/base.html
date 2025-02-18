@@ -12,10 +12,10 @@
         <div class="container mx-auto flex items-center justify-between">
             <div class="text-white font-bold text-xl">BrandName</div>
             <div class="hidden md:flex space-x-4">
-                <a href={% url 'home' %}class="text-white hover:text-gray-200">Home</a>
-                <a href={% url 'about' %} class="text-white hover:text-gray-200">About</a>
-                <a href={% url 'logout' %} class="text-white hover:text-gray-200">login</a>
-                <a href={% url 'register' %} class="text-white hover:text-gray-200">Register</a>
+                <a href="{% url 'home' %}"class="text-white hover:text-gray-200">Home</a>
+                <a href="{% url 'about' %}" class="text-white hover:text-gray-200">About</a>
+                <a href="{% url 'logout' %}" class="text-white hover:text-gray-200">login</a>
+                <a href="{% url 'register' %}" class="text-white hover:text-gray-200">Register</a>
             </div>
             <div class="md:hidden">
                 <button id="navbar-toggle" class="text-white focus:outline-none">
@@ -28,14 +28,16 @@
         <div id="navbar-menu" class="hidden md:hidden">
             <a href="{% url 'home' %}" class="block text-white px-4 py-2 hover:bg-blue-500">Home</a>
             <a href="{% url 'about' %}" class="block text-white px-4 py-2 hover:bg-blue-500">About</a>
-            <a href="{% url 'logout' %} class="block text-white px-4 py-2 hover:bg-blue-500">Login</a>
-            <a href={% url 'register' %} class="block text-white px-4 py-2 hover:bg-blue-500">Register</a>
+            <a href="{% url 'logout' %}" class= "block text-white px-4 py-2 hover:bg-blue-500">Login</a>
+            <a href="{% url 'register' %}" class="block text-white px-4 py-2 hover:bg-blue-500">Register</a>
         </div>
     </nav>
      <!-- Content -->
     <div class="container mx-auto mt-8">
         {% block content %}
         {% endblock content %}
+        {% block Register %}
+        {% endblock %}
     </div>
 
     <!-- Footer -->
