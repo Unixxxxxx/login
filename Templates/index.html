@@ -10,36 +10,39 @@
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
 
-    <!-- Header Section -->
-    <header class="bg-blue-600 p-5 text-white">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <div>
-                <a href="/" class="text-2xl font-bold">BlogSite</a>
-            </div>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="/" class="hover:text-gray-300">Home</a></li>
-                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                    <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
-                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-                </ul>
-            </nav>
-            <div>
-                <button class="bg-white text-blue-600 py-2 px-4 rounded-full hover:bg-gray-200">Join Our Newsletter</button>
-            </div>
+   <!-- Header Section -->
+<header class="bg-transparent p-5 text-white">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <div>
+            <a href="{% url 'login' %}" class="text-2xl font-bold text-red-600">BlogSite</a>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-96 bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1500x800');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
-            <div>
-                <h1 class="text-4xl md:text-6xl font-bold">Welcome to Your Source for Expert Tips!</h1>
-                <a href="{% url 'login' %}" class="mt-4 inline-block text-xl bg-blue-600 py-2 px-6 rounded-full text-white hover:bg-blue-700">Login</a>
-            </div>
+        <nav>
+            <!-- <ul class="flex space-x-6">
+                <li><a href="/" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+            </ul> -->
+        </nav>
+        
+        <div>
+            <button class="bg-white text-blue-600 py-2 px-4 rounded-full hover:bg-gray-200">Join Our Newsletter</button>
         </div>
-    </section>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-96 bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/zN_PbFA8SkmtYaGmV5j0FPMdJwOD7RMwN8UhiuBD5eo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly92ZW5u/Z2FnZS13b3JkcHJl/c3MuczMuYW1hem9u/YXdzLmNvbS91cGxv/YWRzLzIwMTgvMTEv/UGluay1PcmFuZ2Ut/SG9yaXpvbnRhbC1D/cmVhdGl2ZS1FdmVu/dC1Qb3N0ZXItSWRl/YS0xLmpwZw');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold">Welcome to Your Source for Expert Tips!</h1>
+            <a href="{% url 'login' %}" class="mt-4 inline-block text-xl bg-blue-600 py-2 px-6 rounded-full text-white hover:bg-blue-700">Login</a>
+        </div>
+    </div>
+</section>
+
 
     <!-- Featured Posts Section -->
     <section id="blog" class="py-12">
@@ -47,27 +50,27 @@
             <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Featured Posts</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/500x300" alt="Post 1" class="w-full h-48 object-cover">
+                    <img src="https://imgs.search.brave.com/hZDbUOsTe5bo4wYkpx2QhD_C8Klc04e66IqBzgrpe-c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9kZXNp/Z253aXphcmQuY29t/L2Jsb2cvYmxvZy1w/b3N0LWltYWdlcy9y/ZXNpemUvZWZmZWN0/aXZlLWJsb2ctaW1h/Z2UtZmVhdHVyZWRf/MTY1NzExNDQxMDk2/M19yZXNpemUuanBn" alt="Post 1" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold">How to Start a Blog from Scratch</h3>
                         <p class="mt-4 text-gray-600">A step-by-step guide to starting your own blog and reaching an audience.</p>
-                        <a href="#" class="mt-4 text-blue-600">Read More</a>
+                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/500x300" alt="Post 2" class="w-full h-48 object-cover">
+                    <img src="https://imgs.search.brave.com/6VWaB1ylD5Xqs_BTlx0oCDKUh3UiXP5UBYmMTLlwpB4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbmNv/bWVkaWFyeS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTEv/MDkvUG9zdC1JbWFn/ZS1TdHlsaW5nLVBT/RC1UdXRzLnBuZw" alt="Post 2" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold">10 Tips for Better Photography</h3>
                         <p class="mt-4 text-gray-600">Improve your photography skills with these 10 simple tips.</p>
-                        <a href="#" class="mt-4 text-blue-600">Read More</a>
+                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/500x300" alt="Post 3" class="w-full h-48 object-cover">
+                    <img src="https://imgs.search.brave.com/YYKXs9TVewLbN3pTCI36k0omPCAeRrLiZZtcCSmqMTk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHVic3BvdC5jb20v/aHViZnMvYmxvZy10/ZW1wbGF0ZS1nb29n/bGUtZG9jcy0xLTIw/MjUwMTMwLTI2ODY3/MjQud2VicA" alt="Post 3" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold">Mastering SEO: The Basics You Need to Know</h3>
                         <p class="mt-4 text-gray-600">Learn the essential SEO techniques to boost your website’s visibility.</p>
-                        <a href="#" class="mt-4 text-blue-600">Read More</a>
+                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
                     </div>
                 </div>
             </div>
@@ -102,20 +105,22 @@
     
 
     <!-- Footer Section -->
-    <footer class="bg-blue-600 py-8 mt-12 text-white">
-        <div class="max-w-screen-xl mx-auto px-4">
-            <div class="flex justify-between items-center">
-                <div>
-                    <p>&copy; 2025 BlogSite. All Rights Reserved.</p>
+    <footer class="bg-gradient-to-t from-blue-800 to-blue-600 py-10 text-white">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex justify-between items-center flex-col sm:flex-row space-y-6 sm:space-y-0">
+                <!-- Copyright Section -->
+                <div class="text-center sm:text-left">
+                    <p class="text-lg sm:text-xl font-semibold text-gray-200">&copy; 2025 BlogSite. All Rights Reserved.</p>
                 </div>
-                <div class="space-x-4">
-                    <a href="#" class="hover:text-gray-200">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-200">Terms & Conditions</a>
-                    <a href="#" class="hover:text-gray-200">Contact</a>
+                
+                <!-- Footer Links Section -->
+                <div class="flex space-x-6 justify-center sm:justify-end text-lg font-medium">
+                    <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Privacy Policy</a>
+                    <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Terms & Conditions</a>
+                    <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Contact</a>
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer>   
 </body>
 </html>
