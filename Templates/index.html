@@ -49,33 +49,20 @@
         <div class="max-w-screen-xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Featured Posts</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://imgs.search.brave.com/hZDbUOsTe5bo4wYkpx2QhD_C8Klc04e66IqBzgrpe-c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9kZXNp/Z253aXphcmQuY29t/L2Jsb2cvYmxvZy1w/b3N0LWltYWdlcy9y/ZXNpemUvZWZmZWN0/aXZlLWJsb2ctaW1h/Z2UtZmVhdHVyZWRf/MTY1NzExNDQxMDk2/M19yZXNpemUuanBn" alt="Post 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold">How to Start a Blog from Scratch</h3>
-                        <p class="mt-4 text-gray-600">A step-by-step guide to starting your own blog and reaching an audience.</p>
-                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
+                {% for post in posts %}
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold">{{ post.title }}</h3>
+                            <p class="mt-4 text-gray-600">{{ post.description|truncatewords:20 }}</p>
+                            <a href="#" class="mt-4 text-blue-600">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://imgs.search.brave.com/6VWaB1ylD5Xqs_BTlx0oCDKUh3UiXP5UBYmMTLlwpB4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbmNv/bWVkaWFyeS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTEv/MDkvUG9zdC1JbWFn/ZS1TdHlsaW5nLVBT/RC1UdXRzLnBuZw" alt="Post 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold">10 Tips for Better Photography</h3>
-                        <p class="mt-4 text-gray-600">Improve your photography skills with these 10 simple tips.</p>
-                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="https://imgs.search.brave.com/YYKXs9TVewLbN3pTCI36k0omPCAeRrLiZZtcCSmqMTk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHVic3BvdC5jb20v/aHViZnMvYmxvZy10/ZW1wbGF0ZS1nb29n/bGUtZG9jcy0xLTIw/MjUwMTMwLTI2ODY3/MjQud2VicA" alt="Post 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold">Mastering SEO: The Basics You Need to Know</h3>
-                        <p class="mt-4 text-gray-600">Learn the essential SEO techniques to boost your website’s visibility.</p>
-                        <a href="{% url 'login' %}" class="mt-4 text-blue-600">Read More</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
+    
 
     <!-- Sidebar Section -->
     <aside class="bg-white shadow-lg p-6 fixed top-20 right-6 w-80 rounded-lg hidden md:block">

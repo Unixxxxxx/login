@@ -8,5 +8,5 @@ urlpatterns = [
     path('home/', home, name='home'),
     path('about/', about, name='about')
     #path('form/',form, name ='form')
-]
+] 
 
