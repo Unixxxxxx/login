@@ -3,6 +3,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UserRegistrationForm, UserLoginForm
+from.models import Form
 
 def register(request):
     if request.method == 'POST':
@@ -44,3 +45,19 @@ def about(request):
 def user_logout(request):
     logout(request)
     return redirect('login')
+
+def user(request):
+    if request.method == 'POST':
+        name = request.POST.get('fname')  # Ensure the name matches the form field
+        lname = request.POST.get('lname')
+        age = request.POST.get('age')
+
+        # Save data in the database
+        Form.objects.create(name=name, lname=lname, age=age)
+
+        return redirect('thankyou')  # Ensure the correct URL name is used
+
+    return render(request, 'form.html')
+
+def thankyou(request):
+    return render(request, "Thankyou.html")

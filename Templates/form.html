@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block form %}
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <form method="POST" class="bg-white p-6 rounded-lg shadow-md w-96">
+        {% csrf_token %}
+        <h2 class="text-2xl font-bold mb-4">User Form</h2>
+        
+        <label class="block mb-2">First Name:</label>
+        <input type="text" name="fname" class="w-full p-2 border rounded mb-4" required>
+        
+        <label class="block mb-2">Last Name:</label>
+        <input type="text" name="lname" class="w-full p-2 border rounded mb-4" required>
+        
+        <label class="block mb-2">Age:</label>
+        <input type="number" name="age" class="w-full p-2 border rounded mb-4" required>
+        
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+    </form>
+</body>
+{% endblock %}
