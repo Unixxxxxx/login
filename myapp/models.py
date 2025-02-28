@@ -1,5 +1,5 @@
 from django.db import models
-class Form(models.Model):
+class UserData(models.Model):
     name = models.CharField(max_length=100)
     lname = models.CharField(max_length=50, null=True)
     age= models.IntegerField(null=True)
