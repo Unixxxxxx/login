@@ -1,11 +1,14 @@
-import pandas as pd
 import os
+import pandas as pd
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UserRegistrationForm, UserLoginForm
-from.models import UserData
+from .models import User
+
+
 
 def register(request):
     if request.method == 'POST':
@@ -50,15 +53,15 @@ def user_logout(request):
 
 def user(request):
     if request.method == 'POST':
-        name = request.POST.get('fname')  # Ensure the name matches the form field
+        # Get the form data (ensure 'fname', 'lname', and 'age' match the form field names)
+        name = request.POST.get('fname')  
         lname = request.POST.get('lname')
         age = request.POST.get('age')
 
-        # Save data in the database
-        # Save data to database using the correct model
-        UserData.objects.create(name=name, lname=lname, age=age)
+        # Save data in the database (ensure User model has 'name', 'lname', 'age' fields)
+        User.objects.create(name=name, lname=lname, age=age)
 
-        # Define the file path in the media directory
+        # Define the file path in the media directory for the Excel file
         file_path = os.path.join(settings.MEDIA_ROOT, "user_data.xlsx")
 
         # Ensure the media directory exists
@@ -68,19 +71,21 @@ def user(request):
         if os.path.exists(file_path):
             df = pd.read_excel(file_path)
         else:
+            # If the file doesn't exist, create a new DataFrame with column headers
             df = pd.DataFrame(columns=["First Name", "Last Name", "Age"])
 
         # Add new data
         new_data = pd.DataFrame([[name, lname, age]], columns=df.columns)
         df = pd.concat([df, new_data], ignore_index=True)
 
-        # Save to Excel
+        # Save the updated DataFrame to Excel
         df.to_excel(file_path, index=False)
 
+        # Redirect to the thank you page after saving data
+        return redirect('thankyou')  # Ensure the correct URL name is used for 'thankyou'
 
-        return redirect('thankyou')  # Ensure the correct URL name is used
-
-    return render(request, 'form.html')
+    return render(request, 'form.html')  # Render the form page if the request is not POST
 
 def thankyou(request):
+    # Render the thank you page after form submission
     return render(request, "Thankyou.html")
