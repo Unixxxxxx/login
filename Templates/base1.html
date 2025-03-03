@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+   <!-- Header Section -->
+<header class="bg-transparent p-5 text-white">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <div>
+            <a href="{% url 'login' %}" class="text-2xl font-bold text-red-600">BlogSite</a>
+        </div>
+
+        <nav>
+            <!-- <ul class="flex space-x-6">
+                <li><a href="/" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+            </ul> -->
+        </nav>
+        
+        <div>
+            <button class="bg-white text-blue-600 py-2 px-4 rounded-full hover:bg-gray-200">Join Our Newsletter</button>
+        </div>
+    </div>
+</header>
+{% block login %}
+{% endblock%}
+{% block Register %}
+{% endblock %}
+
+
+ <!-- Footer Section -->
+ <footer class="bg-gradient-to-t from-blue-800 to-blue-600 py-10 text-white">
+    <div class="max-w-screen-xl mx-auto px-6">
+        <div class="flex justify-between items-center flex-col sm:flex-row space-y-6 sm:space-y-0">
+            <!-- Copyright Section -->
+            <div class="text-center sm:text-left">
+                <p class="text-lg sm:text-xl font-semibold text-gray-200">&copy; 2025 BlogSite. All Rights Reserved.</p>
+            </div>
+            
+            <!-- Footer Links Section -->
+            <div class="flex space-x-6 justify-center sm:justify-end text-lg font-medium">
+                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Privacy Policy</a>
+                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Terms & Conditions</a>
+                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>  

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>PDF Files List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>File</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pdf in pdf_files %}
+                <tr>
+                    <td>{{ pdf.title }}</td>
+                    <td>{{ pdf.description }}</td>
+                    <td><a href="{{ pdf.pdf_file.url }}" target="_blank">Download</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
