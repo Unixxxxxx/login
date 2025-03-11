@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +42,15 @@ INSTALLED_APPS = [
     'myapp',
     'myapp1',
 ]
+JAZZMIN_SETTINGS = {
+    "site_title": "My Admin Panel",
+    "site_header": "My Custom Admin",
+    "site_brand": "Admin Dashboard",
+    "site_logo": "your_app/logo.png",  # Add a logo
+    "welcome_sign": "Welcome to My Admin!",
+    "copyright": "© 2024 My Company",
+    "search_model": "your_app.Contact",  # Enables search
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
