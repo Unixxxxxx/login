@@ -46,7 +46,7 @@ JAZZMIN_SETTINGS = {
     "site_title": "My Admin Panel",
     "site_header": "My Custom Admin",
     "site_brand": "Admin Dashboard",
-    "site_logo": "your_app/logo.png",  # Add a logo
+    #"site_logo": "your_app/logo.png",  # Add a logo
     "welcome_sign": "Welcome to My Admin!",
     "copyright": "© 2024 My Company",
     "search_model": "your_app.Contact",  # Enables search
