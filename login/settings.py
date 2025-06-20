@@ -9,7 +9,62 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+# ----------------------------------------
+# BASE_DIR & Logging Directory Setup
+# ----------------------------------------
+
+from pathlib import Path
 import os
+
+# Define BASE_DIR first
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Define and auto-create log directory
+LOG_DIR = os.path.join(BASE_DIR, 'log')
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+
+# ----------------------------------------
+# Django Logging Configuration
+# ----------------------------------------
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOG_DIR, 'admin_access.log'),  # logs will go here
+        },
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}
+
+
+
+# Create 'log' directory if it doesn't exist
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+from django.contrib import admin
+from django.http import HttpResponseForbidden
+
+class SuperuserOnlyAdminSite(admin.AdminSite):
+    def has_permission(self, request):
+        return request.user.is_active and request.user.is_superuser
+
+admin.site = SuperuserOnlyAdminSite()
+
+
+# import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,6 +115,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'login.middleware.restrict_admin.BlockAdminForNonSuperusers', 
 ]
 
 ROOT_URLCONF = 'login.urls'
@@ -113,6 +169,30 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+import os
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'log', 'admin_access.log'),
+        },
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}
+
 
 
 # Internationalization

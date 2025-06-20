@@ -1,0 +1,72 @@
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 16, in __call__
+    logger.warning(f"[ADMIN BLOCK] User '{request.user.username}' (ID: {request.user.id}) attempted admin access. IP: {request.META.get('REMOTE_ADDR')}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"GET /admin/login/?next=/admin/ HTTP/1.1" 500 72924
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 16, in __call__
+    logger.warning(f"[ADMIN BLOCK] User '{request.user.username}' (ID: {request.user.id}) attempted admin access. IP: {request.META.get('REMOTE_ADDR')}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"GET /admin/ HTTP/1.1" 500 72334
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 16, in __call__
+    logger.warning(f"[ADMIN BLOCK] User '{request.user.username}' (ID: {request.user.id}) attempted admin access. IP: {request.META.get('REMOTE_ADDR')}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"GET /admin/ HTTP/1.1" 500 72608
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 16, in __call__
+    logger.warning(f"[ADMIN BLOCK] User '{request.user.username}' (ID: {request.user.id}) attempted admin access. IP: {request.META.get('REMOTE_ADDR')}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"GET /admin/ HTTP/1.1" 500 72334
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
