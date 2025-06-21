@@ -72,12 +72,12 @@ Step 1: Build Docker Image
 bash
 Copy
 Edit
-docker build -t yourdockerhubusername/myapp .
+docker build -t mynewapp .
 Step 2: Run Container
 bash
 Copy
 Edit
-docker run -d -p 8000:8000 yourdockerhubusername/myapp
+docker run -d -p 8000:8000 mynewapp
 Visit http://localhost:8000
 
 🔁 CI/CD with GitHub Actions
