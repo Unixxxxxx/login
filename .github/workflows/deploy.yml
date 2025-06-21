@@ -27,5 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourdockerhubusername/your-app-name:latest
+          tags: 19bca1157/your-app-name:latest
 
