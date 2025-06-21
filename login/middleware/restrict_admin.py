@@ -17,6 +17,6 @@ class BlockAdminForNonSuperusers:
 
             if not request.user.is_superuser:
                 logger.warning(f"[ADMIN BLOCK] User '{request.user.username}' (ID: {request.user.id}) attempted admin access. IP: {request.META.get('REMOTE_ADDR')}")
-                return HttpResponseForbidden("❌ Access Denied: Not a superuser.")
+                return HttpResponseForbidden(render(request, 'myapp/403.html'))
 
         return self.get_response(request)

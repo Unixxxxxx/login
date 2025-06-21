@@ -1,4 +1,4 @@
-Internal Server Error: /admin/login/
+ Internal Server Error: /admin/login/
 Traceback (most recent call last):
   File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
@@ -72,6 +72,7 @@ Forbidden: /admin/
 "GET /admin/ HTTP/1.1" 403 35
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 4844
+<<<<<<< HEAD
 Not Found: /home/Lighthouse.jpg
 "GET /home/Lighthouse.jpg HTTP/1.1" 404 4868
 Not Found: /home/Lighthouse.jpg
@@ -82,3 +83,121 @@ Not Found: /Lighthouse.jpg
 "GET /Lighthouse.jpg HTTP/1.1" 404 4853
 Not Found: /accounts/login/
 "GET /accounts/login/?next=/home/ HTTP/1.1" 404 4868
+=======
+Not Found: /login/admin
+"GET /login/admin HTTP/1.1" 404 4844
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Forbidden: /admin/
+"GET /admin/ HTTP/1.1" 403 35
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(render(request, 'myapp/403.html'))
+                                 ^^^^^^
+NameError: name 'render' is not defined
+"GET /admin/ HTTP/1.1" 500 72263
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(render(request, 'myapp/403.html'))
+                                 ^^^^^^
+NameError: name 'render' is not defined
+"GET /admin/ HTTP/1.1" 500 72400
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(render(request, 'myapp/403.html'))
+                                 ^^^^^^
+NameError: name 'render' is not defined
+"GET /admin/ HTTP/1.1" 500 72126
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(redirect(request, 'myapp/403.html'))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '<WSGIRequest: GET '/admin/'>' not found. '<WSGIRequest: GET '/admin/'>' is not a valid view function or pattern name.
+"GET /admin/ HTTP/1.1" 500 91247
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(redirect(request, 'myapp/403.html'))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/env/lib/python3.12/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '<WSGIRequest: GET '/admin/'>' not found. '<WSGIRequest: GET '/admin/'>' is not a valid view function or pattern name.
+"GET /admin/ HTTP/1.1" 500 90973
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(render(request, 'myapp/403.html'))
+                                 ^^^^^^
+NameError: name 'render' is not defined
+"GET /admin/ HTTP/1.1" 500 72263
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/workspaces/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/login/login/middleware/restrict_admin.py", line 20, in __call__
+    return HttpResponseForbidden(render(request, 'myapp/403.html'))
+                                 ^^^^^^
+NameError: name 'render' is not defined
+"GET /admin/ HTTP/1.1" 500 72263
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+>>>>>>> ed195ed (Your message here)
