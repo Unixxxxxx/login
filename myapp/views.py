@@ -42,8 +42,8 @@ def user_login(request):
 
 @login_required
 def home(request):
-    return render(request, 'myapp/home.html')
-
+    email = request.GET.get('email')  # Get email from query params
+    return render(request, 'myapp/home.html', {'email': email})
 def about(request):
     return render(request, 'myapp/about.html')
 
