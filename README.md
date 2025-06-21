@@ -1,8 +1,13 @@
-# 🛡️ Django Blog & Login App with Docker Deployment
+<h1 align="center">🛡️ Django Login & Blog App</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Django-Login%20%26%20Blog-green?style=for-the-badge&logo=django" />
+  <img src="https://img.shields.io/badge/Docker-Deploy-blue?style=for-the-badge&logo=docker" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-purple?style=for-the-badge&logo=githubactions" />
+</p>
 
+> A powerful Django-based application with modular apps for user login (`login`), blog post management (`myapp`), and extended modules (`myapp1`). Fully containerized with Docker and integrated CI/CD via GitHub Actions.
 
-A modern, full-stack **Django** application with user authentication, blog management, and deployment through **Docker** and **GitHub Actions**.
-
+---
 ---
 
 ## 🗂️ Project Structure
