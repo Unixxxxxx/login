@@ -1,6 +1,5 @@
 # 🛡️ Django Blog & Login App with Docker Deployment
 
-![Header](https://github.com/yourusername/your-repo/assets/your-image-id/header.png)
 
 A modern, full-stack **Django** application with user authentication, blog management, and deployment through **Docker** and **GitHub Actions**.
 
@@ -62,20 +61,6 @@ A modern, full-stack **Django** application with user authentication, blog manag
 🐳 Dockerized Setup
 
 🔄 CI/CD with GitHub Actions
-🌐 UI Preview
-🏠 Home Page
-![image](https://github.com/user-attachments/assets/1de5f078-3e10-42de-8ad7-69548ca23e46)
-
-
-
-🔐 Login Page
-
-![image](https://github.com/user-attachments/assets/f4a90be6-588b-46c2-b9e7-043f018c61d1)
-
-
-👨‍💻 About Me
-![image](https://github.com/user-attachments/assets/b9d2a2a1-7bdb-47d6-8b28-a378ae57d889)
-
 
 🐳 Docker Deployment
 Step 1: Build Docker Image
@@ -114,13 +99,6 @@ Images: /media/blog_image/
 Logs: log/admin_access.log
 
 Excel Files: user_data.xlsx
-
-🔐 GitHub Secrets (Required)
-Make sure to add these in GitHub > Repository Settings > Secrets > Actions:
-
-DOCKER_USERNAME
-
-DOCKER_PASSWORD
 
 🙋‍♂️ Author
 Sudhanshu Kumar
