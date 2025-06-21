@@ -7,6 +7,14 @@
     <title>Blog Page</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aboutpage styling  -->
+     <style>
+    .fade-in { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
 
@@ -35,6 +43,7 @@
 {% endblock%}
 {% block Register %}
 {% endblock %}
+
 
 
  <!-- Footer Section -->

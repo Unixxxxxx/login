@@ -70,3 +70,15 @@ Forbidden: /admin/
 "GET /admin/ HTTP/1.1" 403 35
 Forbidden: /admin/
 "GET /admin/ HTTP/1.1" 403 35
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4844
+Not Found: /home/Lighthouse.jpg
+"GET /home/Lighthouse.jpg HTTP/1.1" 404 4868
+Not Found: /home/Lighthouse.jpg
+"GET /home/Lighthouse.jpg HTTP/1.1" 404 4868
+Not Found: /home/Lighthouse.jpg
+"GET /home/Lighthouse.jpg HTTP/1.1" 404 4868
+Not Found: /Lighthouse.jpg
+"GET /Lighthouse.jpg HTTP/1.1" 404 4853
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/home/ HTTP/1.1" 404 4868

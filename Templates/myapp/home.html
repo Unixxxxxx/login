@@ -1,17 +1,97 @@
-{% extends 'base.html' %}
+<!-- {% extends 'base.html' %}
+{% block content %} -->
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudhanshu Roy - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-blue-100 via-white to-indigo-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="text-center py-10 bg-white shadow-md sticky top-0 z-50">
+    <h1 class="text-4xl font-extrabold text-indigo-700">Sudhanshu Roy</h1>
+    <p class="text-gray-600 text-lg mt-1">Software Developer | Cybersecurity & DevSecOps Learner</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-12 fade-in">
+
+    <!-- About Me -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">👤 About Me</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Hello! I'm Sudhanshu Roy, a passionate software developer with a strong interest in cybersecurity and DevSecOps. 
+        I enjoy building secure, scalable systems and love exploring how tech can solve real-world problems.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">🧠 Skills</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
+        <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS</li>
+        <li><strong>Frameworks:</strong> Django, Kivy, Frappe</li>
+        <li><strong>Security Concepts:</strong> SIEM, IDOR, XSS, HttpOnly, OWASP</li>
+      </ul>
+    </section>
+
+    <!-- Tools & Technologies -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">🧰 Tools & Technologies</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
+        <li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+        <li>Filebeat, Trivy (Vulnerability Scanning)</li>
+        <li>Docker, Git, VirtualBox</li>
+      </ul>
+    </section>
+
+    <!-- Cloud & Identity -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">☁️ Cloud & Identity</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
+        <li>Azure Active Directory (AD), Okta, AWS IAM</li>
+        <li>Google Workspace Identity Integration</li>
+        <li>RBAC, ABAC, Zero Trust Architecture</li>
+      </ul>
+    </section>
+
+    <!-- Networking -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">🌐 Networking</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
+        <li>IP Addressing, Subnetting, Ports, Protocols</li>
+        <li>Firewall Configuration, VLANs</li>
+        <li>Tools: <code>arp-scan</code>, <code>bettercap</code>, Wireshark</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="text-center mt-10">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">📩 Get in Touch</h2>
+      <a href="mailto:sudhanshu@example.com" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300">
+        📧 Email Me
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500">
+    &copy; 2025 Sudhanshu Roy. All rights reserved.
+  </footer>
+
+</body>
+</html>
 
 
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Welcome, {{ user.username }}!</h2>
-        <p class="text-gray-600 mb-6">You have logged in successfully.</p>
-	<h1 class = "text-2xl font-bold text-gray-800 mb-4"> what you want to do  </h1>
-        <a href="{% url 'logout' %}" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">Logout</a>
-	<a href="{% url 'about' %}" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">About</a>
-    <a href="{% url 'register' %}" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">Register</a>
-    </div>
-    {% endblock content %}
-
-
+<!-- {% endblock content %} -->
