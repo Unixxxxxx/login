@@ -64,15 +64,18 @@ A modern, full-stack **Django** application with user authentication, blog manag
 🔄 CI/CD with GitHub Actions
 🌐 UI Preview
 🏠 Home Page
-![image](https://github.com/user-attachments/assets/20b7a27b-cf6f-4741-a678-7d4f20c9d340)
+![image](https://github.com/user-attachments/assets/1de5f078-3e10-42de-8ad7-69548ca23e46)
+
 
 
 🔐 Login Page
 
-![image](https://github.com/user-attachments/assets/9e108610-3044-4e35-8622-f144276c677b)
+![image](https://github.com/user-attachments/assets/f4a90be6-588b-46c2-b9e7-043f018c61d1)
+
 
 👨‍💻 About Me
-![image](https://github.com/user-attachments/assets/02786385-edfa-47e1-bd73-ad51068b58d8)
+![image](https://github.com/user-attachments/assets/b9d2a2a1-7bdb-47d6-8b28-a378ae57d889)
+
 
 🐳 Docker Deployment
 Step 1: Build Docker Image
