@@ -124,9 +124,3 @@ This project is licensed under the MIT License.
 
 ---
 
-Let me know if you want to:
-- Add badges (Docker Hub, GitHub Actions)
-- Include screenshots of the UI
-- Add environment variable instructions for production
-
-I'll help you polish it even more!
