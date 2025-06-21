@@ -1,107 +1,132 @@
-<h1 align="center">🛡️ Django Login & Blog App</h1>
-<p align="center">
-  <img src="https://img.shields.io/badge/Django-Login%20%26%20Blog-green?style=for-the-badge&logo=django" />
-  <img src="https://img.shields.io/badge/Docker-Deploy-blue?style=for-the-badge&logo=docker" />
-  <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-purple?style=for-the-badge&logo=githubactions" />
-</p>
+# 🛡️ Django Blog & Login App with Docker Deployment
 
-> A powerful Django-based application with modular apps for user login (`login`), blog post management (`myapp`), and extended modules (`myapp1`). Fully containerized with Docker and integrated CI/CD via GitHub Actions.
+![Header](https://github.com/yourusername/your-repo/assets/your-image-id/header.png)
+
+A modern, full-stack **Django** application with user authentication, blog management, and deployment through **Docker** and **GitHub Actions**.
 
 ---
 
 ## 🗂️ Project Structure
 
-![image](https://github.com/user-attachments/assets/e78ec4b3-41e5-48a4-950f-284fbda25a7a)
-
-
----
-
-## 🚀 Features
-
-🔐 User Login & Signup  
-📝 Create & View Blog Posts  
-📁 Upload and Process Excel Files  
-🖼️ Upload Blog Images  
-🧾 Logging for Admin Access  
-🐳 Dockerized Setup  
-🔁 CI/CD with GitHub Actions
-
----
-
-## 🐳 Docker Setup
-
-> **Build Docker Image**
-
 ```bash
-docker build -t yourdockerhubusername/myapp .
-Run Docker Container
+.
+├── Dockerfile                  # Docker configuration
+├── manage.py                  # Django entry point
+├── cb.sqlite3                 # SQLite DB
+├── requirements.txt           # Dependencies
+├── user_data.xlsx             # Uploaded Excel file
+│
+├── templates/                 # UI HTML templates
+│   ├── base.html
+│   ├── index.html
+│   ├── form.html
+│   ├── blog.html
+│   ├── Thankyou.html
+│   └── myapp/pdf_list.html
+│
+├── media/                     # Uploaded files
+│   └── blog_image/
+│   └── user_data.xlsx
+│
+├── log/
+│   └── admin_access.log       # Admin access logs
+│
+├── login/                     # Auth app
+│   ├── settings.py
+│   ├── views.py
+│   ├── urls.py
+│   └── wsgi.py, asgi.py
+│
+├── myapp/                     # Blog logic
+│   ├── models.py
+│   ├── forms.py
+│   ├── views.py
+│   ├── urls.py
+│   └── migrations/
+│
+├── myapp1/                    # Extended feature module
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+🌟 Features
+🔐 User Authentication (Login/Register)
 
+📝 Blog Creation & Listing
+
+📁 Media Uploads (images & excel files)
+
+📊 Excel File Handling
+
+📜 Log File for Admin Access
+
+🐳 Dockerized Setup
+
+🔄 CI/CD with GitHub Actions
+🌐 UI Preview
+🏠 Home Page
+![image](https://github.com/user-attachments/assets/20b7a27b-cf6f-4741-a678-7d4f20c9d340)
+
+
+🔐 Login Page
+
+![image](https://github.com/user-attachments/assets/9e108610-3044-4e35-8622-f144276c677b)
+
+👨‍💻 About Me
+![image](https://github.com/user-attachments/assets/02786385-edfa-47e1-bd73-ad51068b58d8)
+
+🐳 Docker Deployment
+Step 1: Build Docker Image
+bash
+Copy
+Edit
+docker build -t yourdockerhubusername/myapp .
+Step 2: Run Container
 bash
 Copy
 Edit
 docker run -d -p 8000:8000 yourdockerhubusername/myapp
-🔗 Visit: http://localhost:8000
+Visit http://localhost:8000
 
-⚙️ GitHub Actions CI/CD
-This repo includes a GitHub Actions workflow that:
-
-🏗️ Builds Docker image
-
-🔐 Authenticates with Docker Hub
-
-🚀 Pushes on commit
-
-📁 File location:
+🔁 CI/CD with GitHub Actions
+Deployment happens automatically on commit via:
 
 bash
 Copy
 Edit
 .github/workflows/deploy.yml
-⚙️ GitHub Actions CI/CD
-This repo includes a GitHub Actions workflow that:
+✅ Build image
+✅ Login to Docker Hub
+✅ Push image to DockerHub
 
-🏗️ Builds Docker image
-
-🔐 Authenticates with Docker Hub
-
-🚀 Pushes on commit
-
-📁 File location:
-
-bash
-Copy
-Edit
-.github/workflows/deploy.yml
-📦 Requirements
-Install dependencies locally:
+📦 Dependencies
+Install with:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-📁 Media & Logs
-📸 Uploaded Images → /media/blog_image/
+📂 Data Handling
+Images: /media/blog_image/
 
-🧾 Logs → /log/admin_access.log
+Logs: log/admin_access.log
 
-📊 Excel Uploads → user_data.xlsx
+Excel Files: user_data.xlsx
 
-🔐 GitHub Secrets (Required for CI/CD)
-Go to: GitHub → Settings → Secrets → Actions
-Add the following secrets:
+🔐 GitHub Secrets (Required)
+Make sure to add these in GitHub > Repository Settings > Secrets > Actions:
 
-Name	Description
-DOCKER_USERNAME	Your Docker Hub username
-DOCKER_PASSWORD	Your Docker Hub token or pwd
+DOCKER_USERNAME
 
-🙋 Author
+DOCKER_PASSWORD
+
+🙋‍♂️ Author
 Sudhanshu Kumar
-💻 Developer | ☁️ Cloud Enthusiast | 🐧 Linux Lover
+🛠️ DevSecOps Enthusiast | 💻 Python & Django Developer
+
+📫 LinkedIn | 🌐 Portfolio
 
 📜 License
-This project is licensed under the MIT License.
-
-
+Licensed under the MIT License.
 
 
 
