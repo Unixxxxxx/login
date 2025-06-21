@@ -101,14 +101,6 @@ Sudhanshu Kumar
 📜 License
 This project is licensed under the MIT License.
 
-🖼️ Preview (Optional)
-Add screenshots or GIFs of your UI here if you'd like:
-
-markdown
-Copy
-Edit
-![Login Page](screenshots/login.png)
-![Blog Page](screenshots/blog.png)
 
 
 
