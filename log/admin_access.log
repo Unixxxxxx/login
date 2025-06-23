@@ -274,3 +274,21 @@ Not Found: /home/sudhanshuroyss208@gmail.com
 "GET /home/sudhanshuroyss208@gmail.com HTTP/1.1" 404 4907
 Not Found: /home/sudhanshuroyss208@gmail.com
 "GET /home/sudhanshuroyss208@gmail.com HTTP/1.1" 404 4907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4844
+Not Found: /things
+"GET /things HTTP/1.1" 404 4829
+Not Found: /things
+"GET /things HTTP/1.1" 404 4829
+Not Found: /form
+"GET /form HTTP/1.1" 404 4823
+Not Found: /form
+"GET /form HTTP/1.1" 404 4823
+Not Found: /form
+"GET /form HTTP/1.1" 404 4823
+Not Found: /form
+"GET /form HTTP/1.1" 404 4823
+Not Found: /from
+"GET /from HTTP/1.1" 404 4823
+Not Found: /from
+"GET /from HTTP/1.1" 404 4823
