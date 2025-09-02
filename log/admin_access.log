@@ -308,3 +308,327 @@ Not Found: /blog_posts
 "GET /blog_posts HTTP/1.1" 404 4841
 Not Found: /blog_posts
 "GET /blog_posts HTTP/1.1" 404 4841
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4844
+Not Found: /xyz
+"GET /xyz HTTP/1.1" 404 4820
+Not Found: /xyz
+"GET /xyz HTTP/1.1" 404 4121
+Not Found: /new
+"GET /new HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+Not Found: /static/jazzmin/css/main.css
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/fontawesome-free/css/all.min.css
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/css/adminlte.min.css
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/img/AdminLTELogo.png
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 404 4121
+Not Found: /static/vendor/adminlte/js/adminlte.min.js
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 404 4121
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+Not Found: /static/jazzmin/js/main.js
+"GET /static/jazzmin/js/main.js HTTP/1.1" 404 4121
+Not Found: /static/vendor/bootstrap/js/bootstrap.min.js
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 4121
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 4121
+Not Found: /static/jazzmin/css/main.css
+"GET /static/jazzmin/css/main.css HTTP/1.1" 404 4121
+Not Found: /xyz
+"GET /xyz HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-21_153358.png
+"GET /media/blog_images/Screenshot_2025-06-21_153358.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-06-20_151704.png
+"GET /media/blog_images/Screenshot_2025-06-20_151704.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/Screenshot_2025-05-16_140424.png
+"GET /media/blog_images/Screenshot_2025-05-16_140424.png HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4121
+Not Found: /blog/
+"GET /blog/ HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss.jpg
+"GET /media/blog_images/ss.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/ss2.jpg
+"GET /media/blog_images/ss2.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
