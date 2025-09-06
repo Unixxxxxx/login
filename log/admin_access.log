@@ -632,3 +632,5 @@ Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
 "GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
 Not Found: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
 "GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 404 4176
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4176
