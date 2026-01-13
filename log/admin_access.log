@@ -636,3 +636,19 @@ Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 4176
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 4176
+Not Found: /login/
+"GET /login/ HTTP/1.1" 404 4176
+Not Found: /login/
+"GET /login/ HTTP/1.1" 404 4176
+Not Found: /login/
+"GET /login/ HTTP/1.1" 404 4176
+Not Found: /login/
+"GET /login/ HTTP/1.1" 404 4176
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/myapp/home/ HTTP/1.1" 404 4176
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/myapp/home/ HTTP/1.1" 404 4176
+Not Found: /adm,in
+"GET /adm,in HTTP/1.1" 404 4176
+Not Found: /adm,in
+"GET /adm,in HTTP/1.1" 404 4176
