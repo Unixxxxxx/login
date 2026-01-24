@@ -6,9 +6,10 @@ from login import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),       # Homepage
-    path('myapp/', include('myapp.urls')),     # App 1
-    path('myapp1/', include('myapp1.urls')),   # App 2
+    path('', views.index, name='index'),    
+    path('myapp/', include('myapp.urls')),     
+    path('myapp1/', include('myapp1.urls')),
+    path('form/', include("form.urls")),
 ]   
 
 # Serve static & media files during development
