@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'import_export',
     'myapp',
     'myapp1',
-    'network',
 ]
 
 # Jazzmin Admin Theme
