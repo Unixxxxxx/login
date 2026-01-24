@@ -1,11 +1,92 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div style="text-align:center; padding:100px;">
-    <h1 style="font-size:60px; color:#e74c3c;">404</h1>
-    <h2>Oops! Page Not Found</h2>
-    <p>The page you’re looking for doesn’t exist or has been moved.</p>
-    <a href="/" style="text-decoration:none; font-size:18px; color:#3498db;">Go Back Home</a>
+<style>
+    .error-container {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        text-align: center;
+    }
+
+    .error-box {
+        padding: 60px 40px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .error-box h1 {
+        font-size: 160px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .error-box h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .error-box p {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }
+
+    .error-box a {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #fff;
+        color: #764ba2;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .error-box a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        background: #f1f1f1;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .error-box h1 {
+            font-size: 100px;
+        }
+        .error-box h2 {
+            font-size: 22px;
+        }
+    }
+</style>
+
+<div class="error-container">
+    <div class="error-box">
+        <h1>404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page you’re looking for doesn’t exist or has been moved.</p>
+        <a href="/">Go Back Home</a>
+    </div>
 </div>
 {% endblock %}
 
