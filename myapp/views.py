@@ -87,5 +87,4 @@ def user(request):
     return render(request, 'form.html')  # Render the form page if the request is not POST
 
 def thankyou(request):
-    # Render the thank you page after form submission
     return render(request, "Thankyou.html")
