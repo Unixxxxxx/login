@@ -714,3 +714,9 @@ Not Found: /nn
 "GET /nn HTTP/1.1" 404 5769
 Not Found: /nn
 "GET /nn HTTP/1.1" 404 5769
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5769
+Not Found: /bdf
+"GET /bdf HTTP/1.1" 404 5769
+Not Found: /bdf
+"GET /bdf HTTP/1.1" 404 5769
