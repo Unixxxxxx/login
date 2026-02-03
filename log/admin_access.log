@@ -720,3 +720,9 @@ Not Found: /bdf
 "GET /bdf HTTP/1.1" 404 5769
 Not Found: /bdf
 "GET /bdf HTTP/1.1" 404 5769
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5769
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5769
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5769
