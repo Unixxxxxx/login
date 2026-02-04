@@ -740,3 +740,39 @@ Not Found: /myapp/app0
 "GET /myapp/app0 HTTP/1.1" 404 5769
 Not Found: /app0/style.css
 "GET /app0/style.css HTTP/1.1" 404 5769
+Internal Server Error: /form
+"GET /form HTTP/1.1" 500 145
+Internal Server Error: /form
+"GET /form HTTP/1.1" 500 145
+Internal Server Error: /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg
+"GET /media/blog_images/WhatsApp_Image_2025-04-27_at_13.05.38_4af8d91a.jpg HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145

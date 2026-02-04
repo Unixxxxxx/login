@@ -1,90 +1,219 @@
-{% extends 'base.html' %}
-{% block content %} 
-  <style>
-    .fade-in { animation: fadeIn 1.2s ease-in; }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelX | Explore the World</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-tr from-blue-100 via-white to-indigo-100 text-gray-800 font-sans">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 
-  <!-- Header -->
-  <header class="text-center py-10 bg-white shadow-md sticky top-0 z-50">
-    <h1 class="text-4xl font-extrabold text-indigo-700">Sudhanshu Roy</h1>
-    <p class="text-gray-600 text-lg mt-1">Software Developer | Cybersecurity & DevSecOps Learner</p>
-  </header>
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #0f172a;
+    color: white;
+}
 
-  <main class="max-w-4xl mx-auto px-6 py-10 space-y-12 fade-in">
+.navbar nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
 
-    <!-- ✅ Welcome message from query param -->
-    {% if email %}
-    <section class="text-center">
-      <h2 class="text-xl font-semibold text-green-700 mb-6">Welcome, {{ email }}!</h2>
-    </section>
-    {% endif %}
+.navbar nav a:hover {
+    color: #38bdf8;
+}
 
-    <!-- About Me -->
-    <section>
-      <h2 class="text-2xl font-bold text-blue-700 mb-3">👤 About Me</h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Hello! I'm Sudhanshu Roy, a passionate software developer with a strong interest in cybersecurity and DevSecOps. 
-        I enjoy building secure, scalable systems and love exploring how tech can solve real-world problems.
-      </p>
-    </section>
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("https://source.unsplash.com/1600x900/?travel") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
 
-    <!-- Skills -->
-    <section>
-      <h2 class="text-2xl font-bold text-blue-700 mb-3">🧠 Skills</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
-        <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS</li>
-        <li><strong>Frameworks:</strong> Django, Kivy, Frappe</li>
-        <li><strong>Security Concepts:</strong> SIEM, IDOR, XSS, HttpOnly, OWASP</li>
-      </ul>
-    </section>
+.hero h1 {
+    font-size: 3rem;
+}
 
-    <!-- Tools & Technologies -->
-    <section>
-      <h2 class="text-2xl font-bold text-blue-700 mb-3">🧰 Tools & Technologies</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
-        <li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
-        <li>Filebeat, Trivy (Vulnerability Scanning)</li>
-        <li>Docker, Git, VirtualBox</li>
-      </ul>
-    </section>
+.hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
 
-    <!-- Cloud & Identity -->
-    <section>
-      <h2 class="text-2xl font-bold text-blue-700 mb-3">☁️ Cloud & Identity</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
-        <li>Azure Active Directory (AD), Okta, AWS IAM</li>
-        <li>Google Workspace Identity Integration</li>
-        <li>RBAC, ABAC, Zero Trust Architecture</li>
-      </ul>
-    </section>
+.btn {
+    background: #38bdf8;
+    color: black;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-    <!-- Networking -->
-    <section>
-      <h2 class="text-2xl font-bold text-blue-700 mb-3">🌐 Networking</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700 text-md">
-        <li>IP Addressing, Subnetting, Ports, Protocols</li>
-        <li>Firewall Configuration, VLANs</li>
-        <li>Tools: <code>arp-scan</code>, <code>bettercap</code>, Wireshark</li>
-      </ul>
-    </section>
+/* DESTINATIONS */
+.destinations {
+    padding: 3rem 2rem;
+    text-align: center;
+}
 
-    <!-- Contact -->
-    <section class="text-center mt-10">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">📩 Get in Touch</h2>
-     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sudhanshuroyss208@gmail.com&su=Hello&body=I%20would%20like%20to%20connect%20with%20you"
-   target="_blank"
-   class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300">
-   📧 Email Me
-</a>
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
-    </section>
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
-  </main>
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-{% endblock content %}
+.card h3 {
+    padding: 1rem;
+}
+
+/* WHY US */
+.why-us {
+    background: #f1f5f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.feature {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 200px;
+}
+
+/* CTA */
+.cta {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+</style>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">TravelX</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Explore The World With Us</h1>
+        <p>Discover amazing places at exclusive deals</p>
+        <a href="#" class="btn">Start Your Journey</a>
+    </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?paris" alt="">
+            <h3>Paris</h3>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?bali" alt="">
+            <h3>Bali</h3>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?dubai" alt="">
+            <h3>Dubai</h3>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us">
+    <h2>Why Choose TravelX?</h2>
+    <div class="features">
+        <div class="feature">🌍 Best Destinations</div>
+        <div class="feature">💰 Affordable Prices</div>
+        <div class="feature">📞 24/7 Support</div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Ready for Your Next Adventure?</h2>
+    <a href="#" class="btn">Book Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 TravelX. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
