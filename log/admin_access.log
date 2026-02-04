@@ -734,3 +734,9 @@ Not Found: /mm
 "GET /mm HTTP/1.1" 404 5769
 Not Found: /mm
 "GET /mm HTTP/1.1" 404 5769
+Not Found: /myapp/app0
+"GET /myapp/app0 HTTP/1.1" 404 5769
+Not Found: /myapp/app0
+"GET /myapp/app0 HTTP/1.1" 404 5769
+Not Found: /app0/style.css
+"GET /app0/style.css HTTP/1.1" 404 5769
