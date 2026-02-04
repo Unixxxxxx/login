@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.index, name='index'),    
     path('myapp/', include('myapp.urls')),     
     path('myapp1/', include('myapp1.urls')),
+    path('app0/', include('app0.urls')),
 ]   
 
 # Serve static & media files during development
