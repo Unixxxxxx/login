@@ -794,3 +794,23 @@ Internal Server Error: /myapp/home/style.css
 "GET /myapp/home/style.css HTTP/1.1" 500 145
 Internal Server Error: /myapp/home/style.css
 "GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /login/
+"GET /login/ HTTP/1.1" 500 145
+Internal Server Error: /login/
+"GET /login/ HTTP/1.1" 500 145
+Internal Server Error: /jhb
+"GET /jhb HTTP/1.1" 500 145
+Internal Server Error: /jhb
+"GET /jhb HTTP/1.1" 500 145
+Internal Server Error: /hh
+"GET /hh HTTP/1.1" 500 145
+Internal Server Error: /hh
+"GET /hh HTTP/1.1" 500 145
+Internal Server Error: /login/
+"GET /login/ HTTP/1.1" 500 145
+Internal Server Error: /login/
+"GET /login/ HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
