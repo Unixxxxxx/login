@@ -1,6 +1,16 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a3a2a,100:2ea043&height=180&section=header&text=Django%20Login%20%26%20Blog%20App&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Web%20App%20%7C%20Docker%20%7C%20CI%2FCD%20via%20GitHub%20Actions&descAlignY=58&descSize=16&animation=fadeIn" />
+
+```
+██████╗      ██╗ █████╗ ███╗   ██╗ ██████╗  ██████╗
+██╔══██╗     ██║██╔══██╗████╗  ██║██╔════╝ ██╔═══██╗
+██║  ██║     ██║███████║██╔██╗ ██║██║  ███╗██║   ██║
+██║  ██║██   ██║██╔══██║██║╚██╗██║██║   ██║██║   ██║
+██████╔╝╚█████╔╝██║  ██║██║ ╚████║╚██████╔╝╚██████╔╝
+╚═════╝  ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝
+          Login & Blog App  |  Docker  |  CI/CD
+```
+
 
 <br/>
 
@@ -264,12 +274,14 @@ See the LICENSE file for full terms.
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2ea043,50:1a3a2a,100:0d1117&height=100&section=footer&animation=fadeIn" />
+
+---
 
 ![Built with Django](https://img.shields.io/badge/Built_with-Django_%26_Docker-2ea043?style=flat-square&logo=django&logoColor=white)
 &nbsp;
 ![Made by Sudhanshu](https://img.shields.io/badge/Made_by-Sudhanshu_Kumar-3776AB?style=flat-square&logo=python&logoColor=white)
 &nbsp;
 ![License MIT](https://img.shields.io/badge/License-MIT-f0a500?style=flat-square)
+
 
 </div>
