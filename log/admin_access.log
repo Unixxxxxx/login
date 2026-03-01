@@ -816,3 +816,13 @@ Internal Server Error: /myapp/home/style.css
 "GET /myapp/home/style.css HTTP/1.1" 500 145
 Internal Server Error: /myapp/home/style.css
 "GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /myapp/home/style.css
+"GET /myapp/home/style.css HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145

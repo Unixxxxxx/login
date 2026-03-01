@@ -5,12 +5,12 @@ from django.urls import path, include
 from login import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),    
-    path('myapp/', include('myapp.urls')),     
-    path('myapp1/', include('myapp1.urls')),
-    path('app0/', include('app0.urls')),
-]   
+    path("admin/", admin.site.urls),
+    path("", views.index, name="index"),
+    path("myapp/", include("myapp.urls")),
+    path("myapp1/", include("myapp1.urls")),
+    path("app0/", include("app0.urls")),
+]
 
 # Serve static & media files during development
 if settings.DEBUG:
@@ -18,4 +18,4 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # Custom error handlers
-handler404 = 'login.views.custom_page_not_found'
+handler404 = "login.views.custom_page_not_found"

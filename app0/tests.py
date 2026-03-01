@@ -1,3 +1,1 @@
-from django.test import TestCase
-
-# Create your tests here.
+# No tests defined for app0
