@@ -1053,3 +1053,41 @@ Internal Server Error: /admin
 "GET /admin HTTP/1.1" 500 145
 Internal Server Error: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /admin
+"GET /admin HTTP/1.1" 500 145
+Internal Server Error: /admin
+"GET /admin HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 500 145
+Internal Server Error: /admin
+"GET /admin HTTP/1.1" 500 145
+Internal Server Error: /admin
+"GET /admin HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /adminef
+"GET /adminef HTTP/1.1" 500 145
+Internal Server Error: /adminef
+"GET /adminef HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /adminef/fhhg
+"GET /adminef/fhhg HTTP/1.1" 500 145
+Internal Server Error: /adminef/fhhg
+"GET /adminef/fhhg HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /dd
+"GET /dd HTTP/1.1" 500 145
+Internal Server Error: /dd
+"GET /dd HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
+Internal Server Error: /dd
+"GET /dd HTTP/1.1" 500 145
+Internal Server Error: /dd
+"GET /dd HTTP/1.1" 500 145
+Internal Server Error: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 500 145
