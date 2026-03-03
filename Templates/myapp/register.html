@@ -1,36 +1,330 @@
 {% extends 'base1.html' %}
 {% block Register %}
-<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4 font-sans">
-    <div class="w-full max-w-5xl bg-white rounded-3xl shadow-xl p-10 md:p-16 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-        
-        <!-- Left: Form -->
-        <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-6">Create Your Account</h2>
-            <form method="post" class="space-y-5">
-                {% csrf_token %}
-                {% for field in form %}
-                    <div>
-                        <label for="{{ field.id_for_label }}" class="block text-gray-700 font-semibold mb-1">{{ field.label }}</label>
-                        {{ field }}
-                        {% if field.errors %}
-                        <p class="text-red-500 text-sm mt-1">{{ field.errors|striptags }}</p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
-                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition duration-300 shadow-md">
-                    Sign Up
-                </button>
-            </form>
-            <p class="text-center mt-4 text-gray-600">
-                Already registered?
-                <a href="{% url 'login' %}" class="text-blue-600 hover:underline font-medium">Login here</a>
-            </p>
-        </div>
 
-        <!-- Right: Image -->
-        <div class="w-full md:w-1/2 flex justify-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="User Register" class="w-64 h-64 object-contain">
-        </div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 950px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(102, 126, 234, 0.35), 0 8px 32px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Left Panel ── */
+  .left-panel {
+    flex: 1;
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .brand-icon {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+
+  /* ── Form Fields ── */
+  .field-group { margin-bottom: 16px; }
+
+  .field-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  /* Style all Django-rendered inputs & selects */
+  .field-group input,
+  .field-group select,
+  .field-group textarea {
+    width: 100%;
+    padding: 11px 16px;
+    border: 2px solid #e8e8f0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+    outline: none;
+  }
+
+  .field-group input:focus,
+  .field-group select:focus,
+  .field-group textarea:focus {
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+  }
+
+  .field-group input::placeholder { color: #bbb; }
+
+  .error-msg {
+    color: #e53e3e;
+    font-size: 0.78rem;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .error-msg::before { content: "⚠ "; }
+
+  /* ── Submit Button ── */
+  .btn-submit {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 6px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 6px 24px rgba(102, 126, 234, 0.45);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-submit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0);
+    transition: background 0.2s;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(102, 126, 234, 0.55);
+  }
+
+  .btn-submit:hover::after { background: rgba(255,255,255,0.08); }
+  .btn-submit:active { transform: translateY(0); }
+
+  .login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.88rem;
+    color: #777;
+  }
+
+  .login-link a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .login-link a:hover { color: #764ba2; text-decoration: underline; }
+
+  /* ── Right Panel ── */
+  .right-panel {
+    width: 360px;
+    background: linear-gradient(160deg, #667eea 0%, #764ba2 60%, #f093fb 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .right-panel::before {
+    content: '';
+    position: absolute;
+    width: 280px; height: 280px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+    top: -80px; right: -80px;
+  }
+
+  .right-panel::after {
+    content: '';
+    position: absolute;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+    bottom: -60px; left: -60px;
+  }
+
+  .right-panel img {
+    width: 180px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-14px); }
+  }
+
+  .right-panel h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .right-panel p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .dots {
+    display: flex; gap: 8px; margin-top: 24px;
+    position: relative; z-index: 1;
+  }
+
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .dot.active { background: #fff; width: 22px; border-radius: 4px; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .card { flex-direction: column; border-radius: 22px; }
+    .right-panel {
+      width: 100%;
+      padding: 36px 28px;
+      border-radius: 0;
+    }
+    .right-panel img { width: 130px; }
+    .right-panel h3 { font-size: 1.15rem; }
+    .left-panel { padding: 36px 28px; }
+    h2 { font-size: 1.55rem; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 12px; }
+    .left-panel { padding: 28px 20px; }
+    h2 { font-size: 1.3rem; }
+    .right-panel { padding: 28px 20px; }
+  }
+</style>
+
+<body>
+  <div class="card">
+
+    <!-- ── Left: Form ── -->
+    <div class="left-panel">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <span class="brand-name">MyApp</span>
+      </div>
+
+      <h2>Create Your Account</h2>
+      <p class="subtitle">Join us today — it's completely free!</p>
+
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="field-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+              <p class="error-msg">{{ field.errors|striptags }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-submit">🚀 Create Account</button>
+      </form>
+
+      <p class="login-link">
+        Already have an account?
+        <a href="{% url 'login' %}">Sign in here</a>
+      </p>
     </div>
+
+    <!-- ── Right: Visual Panel ── -->
+    <div class="right-panel">
+      <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Register Illustration">
+      <h3>Welcome Aboard! 🎉</h3>
+      <p>Create your free account and start your journey with us today.</p>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+  </div>
 </body>
 {% endblock %}
