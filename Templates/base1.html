@@ -3,64 +3,793 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}BlogSite - Share Your Stories{% endblock %}</title>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- aboutpage styling  -->
-     <style>
-    .fade-in { animation: fadeIn 1s ease-in; }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body class="bg-gray-100 font-sans text-gray-800">
-
-   <!-- Header Section -->
-<header class="bg-transparent p-5 text-white">
-    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-        <div>
-            <a href="{% url 'login' %}" class="text-2xl font-bold text-red-600">BlogSite</a>
-        </div>
-
-        <nav>
-            <!-- <ul class="flex space-x-6">
-                <li><a href="/" class="hover:text-gray-300">Home</a></li>
-                <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
-                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-            </ul> -->
-        </nav>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           GLOBAL STYLES & CSS VARIABLES
+        ============================================ */
+        :root {
+            --primary-color: #DC2626;
+            --primary-hover: #B91C1C;
+            --secondary-color: #1E40AF;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-light: #F9FAFB;
+            --border-color: #E5E7EB;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
         
-        <div>
-            <button class="bg-white text-blue-600 py-2 px-4 rounded-full hover:bg-gray-200">Join Our Newsletter</button>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* ============================================
+           HEADER STYLES
+        ============================================ */
+        .site-header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .site-header.scrolled {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Logo Styles */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.875rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: all var(--transition-speed) ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo:hover {
+            color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+        
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+        
+        /* Desktop Navigation */
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-speed) ease;
+        }
+        
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width var(--transition-speed) ease;
+        }
+        
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #EF4444 100%);
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(220, 38, 38, 0.3);
+            background: linear-gradient(135deg, var(--primary-hover) 0%, #DC2626 100%);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity var(--transition-speed) ease;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 5rem 2rem 2rem;
+            transition: right var(--transition-speed) ease;
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .mobile-nav li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .mobile-nav li a:hover {
+            color: var(--primary-color);
+            padding-left: 0.5rem;
+        }
+        
+        .mobile-nav .cta-button {
+            margin-top: 1.5rem;
+            display: block;
+            text-align: center;
+        }
+        
+        /* ============================================
+           MAIN CONTENT AREA
+        ============================================ */
+        main {
+            flex: 1;
+            width: 100%;
+        }
+        
+        /* Animation Utilities */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.6s ease-out;
+        }
+        
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* ============================================
+           FOOTER STYLES
+        ============================================ */
+        .site-footer {
+            background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 50%, #1E293B 100%);
+            color: white;
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Footer Brand Section */
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer Links Section */
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .footer-links li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+            display: inline-block;
+        }
+        
+        .footer-links li a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+            font-size: 1.125rem;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+        }
+        
+        /* Newsletter Section */
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 0.9375rem;
+            outline: none;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .newsletter-form input:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer Bottom Section */
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9375rem;
+        }
+        
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        .footer-bottom-links li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color var(--transition-speed) ease;
+        }
+        
+        .footer-bottom-links li a:hover {
+            color: white;
+        }
+        
+        /* ============================================
+           RESPONSIVE DESIGN
+        ============================================ */
+        
+        /* Tablet Devices */
+        @media screen and (max-width: 1024px) {
+            .header-container {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                gap: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            /* Hide desktop navigation */
+            .nav-menu {
+                display: none;
+            }
+            
+            /* Show mobile navigation */
+            .mobile-nav {
+                display: block;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        
+        /* Small Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .header-container {
+                padding: 0.75rem 1rem;
+            }
+            
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            .site-footer {
+                padding: 2rem 1rem 1rem;
+            }
+            
+            .social-icons a {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* ============================================
+           ACCESSIBILITY & BROWSER COMPATIBILITY
+        ============================================ */
+        
+        /* Focus States for Accessibility */
+        a:focus,
+        button:focus,
+        input:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Reduced Motion Preference */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .site-header,
+            .site-footer,
+            .mobile-menu-toggle,
+            .mobile-nav,
+            .cta-button {
+                display: none;
+            }
+        }
+    </style>
+    
+    {% block extra_css %}
+    <!-- Additional CSS can be added in child templates -->
+    {% endblock %}
+</head>
+
+<body>
+    <!-- ============================================
+         HEADER SECTION
+    ============================================ -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo / Brand -->
+            <a href="{% url 'login' %}" class="logo">
+                <i class="fas fa-pen-nib logo-icon"></i>
+                BlogSite
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="cta-button">Join Newsletter</button>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </div>
-</header>
-{% block login %}
-{% endblock%}
-{% block Register %}
-{% endblock %}
-
-
-
- <!-- Footer Section -->
- <footer class="bg-gradient-to-t from-blue-800 to-blue-600 py-10 text-white">
-    <div class="max-w-screen-xl mx-auto px-6">
-        <div class="flex justify-between items-center flex-col sm:flex-row space-y-6 sm:space-y-0">
-            <!-- Copyright Section -->
-            <div class="text-center sm:text-left">
-                <p class="text-lg sm:text-xl font-semibold text-gray-200">&copy; 2025 BlogSite. All Rights Reserved.</p>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-button">Join Newsletter</button>
+    </nav>
+    
+    <!-- ============================================
+         MAIN CONTENT AREA
+    ============================================ -->
+    <main>
+        {% block login %}
+        <!-- Login page content goes here -->
+        {% endblock %}
+        
+        {% block Register %}
+        <!-- Register page content goes here -->
+        {% endblock %}
+        
+        {% block content %}
+        <!-- Main content goes here -->
+        {% endblock %}
+    </main>
+    
+    <!-- ============================================
+         FOOTER SECTION
+    ============================================ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Brand & About Section -->
+                <div class="footer-section footer-brand">
+                    <h3>BlogSite</h3>
+                    <p>Your platform for sharing stories, ideas, and insights. Join our community of writers and readers from around the world.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Latest Posts</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources Section -->
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#guidelines">Community Guidelines</a></li>
+                        <li><a href="#api">API Documentation</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter Section -->
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Subscribe to our newsletter for the latest updates and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
             
-            <!-- Footer Links Section -->
-            <div class="flex space-x-6 justify-center sm:justify-end text-lg font-medium">
-                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Privacy Policy</a>
-                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Terms & Conditions</a>
-                <a href="{% url 'login' %}" class="text-white hover:text-red-500 transition-colors duration-300">Contact</a>
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlogSite. All Rights Reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="{% url 'login' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'login' %}">Terms & Conditions</a></li>
+                    <li><a href="{% url 'login' %}">Cookie Policy</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</footer>  
+    </footer>
+    
+    <!-- ============================================
+         JAVASCRIPT FOR MOBILE MENU
+    ============================================ -->
+    <script>
+        // Mobile Menu Toggle Functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        
+        function toggleMobileMenu() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = mobileNav.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileNav.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+        
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('.site-header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Close mobile menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
+    
+    {% block extra_js %}
+    <!-- Additional JavaScript can be added in child templates -->
+    {% endblock %}
+</body>
+</html>
