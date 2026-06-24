@@ -21,7 +21,7 @@ LOG_DIR.mkdir(exist_ok=True)
 # ----------------------------------------
 SECRET_KEY = "django-insecure-1ivoxc#e#rnitn7wyvmfbxd-15j=*)a1y9z8of*qo*((qx8h+o"
 DEBUG = False
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", "https://login-black-seven.vercel.app/"]
 
 # ----------------------------------------
 # APPLICATIONS
